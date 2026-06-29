@@ -4,5 +4,5 @@ using UnityEngine;
 
 public class gamemanager : MonoBehaviour
 {
-    public Player player;
+    public PlayerMove2D player;
 }

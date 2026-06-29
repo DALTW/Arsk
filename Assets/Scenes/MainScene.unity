@@ -412,6 +412,7 @@ GameObject:
   - component: {fileID: 2001464024}
   - component: {fileID: 2001464023}
   - component: {fileID: 2001464025}
+  - component: {fileID: 2001464026}
   m_Layer: 0
   m_Name: Knight
   m_TagString: Player
@@ -556,6 +557,31 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::knightmove
   moveSpeed: 10
+--- !u!114 &2001464026
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2001464019}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 777574545a224e20b18d5bea7b7fefc9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::knightatack
+  attackInterval: 2
+  slashFrames:
+  - {fileID: -3660571561243988826, guid: 17b2199e63428ce4bb5145012dbe2f9d, type: 3}
+  - {fileID: 1373310290039150802, guid: 37d37bffd5f1f7546b70b1ee97b2bf10, type: 3}
+  - {fileID: -1429139636971084480, guid: e9523379f73aedc46b69c1dd6e10fb84, type: 3}
+  - {fileID: 4559543775301443952, guid: 90ebd395c8ac16a47973d290ad38128c, type: 3}
+  - {fileID: 1239187260319366027, guid: c3290d3d7bb314849a7e63573ca2f555, type: 3}
+  - {fileID: -6261941741821298692, guid: 7553e033c836c6444a6ee9f315ed9f8e, type: 3}
+  slashFrameTime: 0.06
+  slashOffset: 0.75
+  slashScale: 1
+  hitboxSize: {x: 1.2, y: 0.5}
+  slashSortingOrder: 5
 --- !u!58 &2001464025
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -649,6 +675,182 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a6e37b3e4fa94314ead247f08bc051d7, type: 3}
+--- !u!1 &314159260
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 314159261}
+  - component: {fileID: 314159262}
+  m_Layer: 0
+  m_Name: MonsterSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &314159261
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 314159260}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &314159262
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 314159260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c08afc6a5ef452d97707885c4f6d8fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MonsterSpawner
+  monsters:
+  - monsterName: Bat
+    moveFrames:
+    - {fileID: 5352286359449648278, guid: 21877d89e16a87342b1a8277cfb94701, type: 3}
+    - {fileID: 6843129032921346866, guid: 21877d89e16a87342b1a8277cfb94701, type: 3}
+    - {fileID: -577472684307798074, guid: 21877d89e16a87342b1a8277cfb94701, type: 3}
+    - {fileID: -7030490577846672973, guid: 21877d89e16a87342b1a8277cfb94701, type: 3}
+    - {fileID: 7551582495221066229, guid: 21877d89e16a87342b1a8277cfb94701, type: 3}
+    - {fileID: 7052353571005762725, guid: 21877d89e16a87342b1a8277cfb94701, type: 3}
+    - {fileID: 5571602402917622367, guid: 21877d89e16a87342b1a8277cfb94701, type: 3}
+    - {fileID: -46468130576277366, guid: 21877d89e16a87342b1a8277cfb94701, type: 3}
+    - {fileID: 6967819863540319931, guid: 21877d89e16a87342b1a8277cfb94701, type: 3}
+    - {fileID: -2124115683389910881, guid: 21877d89e16a87342b1a8277cfb94701, type: 3}
+    - {fileID: 6625348985452500428, guid: 21877d89e16a87342b1a8277cfb94701, type: 3}
+    moveSpeed: 2
+    scale: 3
+    colliderRadius: 0.25
+    animationFrameTime: 0.12
+  - monsterName: Mimic
+    moveFrames:
+    - {fileID: -8296385383580801948, guid: f07222ab030350446afdb62210d71be8, type: 3}
+    - {fileID: 3218353051568008401, guid: f07222ab030350446afdb62210d71be8, type: 3}
+    - {fileID: 6971375644381031630, guid: f07222ab030350446afdb62210d71be8, type: 3}
+    - {fileID: -3714987382563562326, guid: f07222ab030350446afdb62210d71be8, type: 3}
+    - {fileID: -2044624726750869082, guid: f07222ab030350446afdb62210d71be8, type: 3}
+    - {fileID: -1800561202758830752, guid: f07222ab030350446afdb62210d71be8, type: 3}
+    moveSpeed: 2
+    scale: 3
+    colliderRadius: 0.25
+    animationFrameTime: 0.12
+  - monsterName: Rat
+    moveFrames:
+    - {fileID: -1882347247711912902, guid: 88c3f15977460c1439ffacbfd4162209, type: 3}
+    - {fileID: 7439426567979852956, guid: 88c3f15977460c1439ffacbfd4162209, type: 3}
+    - {fileID: -2673560216460186399, guid: 88c3f15977460c1439ffacbfd4162209, type: 3}
+    - {fileID: -5822559823783948592, guid: 88c3f15977460c1439ffacbfd4162209, type: 3}
+    - {fileID: -4997308686002322044, guid: 88c3f15977460c1439ffacbfd4162209, type: 3}
+    - {fileID: -7808277857516635856, guid: 88c3f15977460c1439ffacbfd4162209, type: 3}
+    - {fileID: 2102408166121253023, guid: 88c3f15977460c1439ffacbfd4162209, type: 3}
+    - {fileID: -828024806730890176, guid: 88c3f15977460c1439ffacbfd4162209, type: 3}
+    moveSpeed: 2
+    scale: 3
+    colliderRadius: 0.25
+    animationFrameTime: 0.12
+  - monsterName: Slime
+    moveFrames:
+    - {fileID: -8296385383580801948, guid: 36fd4d31df175b74392ede6251e19cfe, type: 3}
+    - {fileID: 3218353051568008401, guid: 36fd4d31df175b74392ede6251e19cfe, type: 3}
+    - {fileID: 6971375644381031630, guid: 36fd4d31df175b74392ede6251e19cfe, type: 3}
+    - {fileID: -3714987382563562326, guid: 36fd4d31df175b74392ede6251e19cfe, type: 3}
+    - {fileID: -2044624726750869082, guid: 36fd4d31df175b74392ede6251e19cfe, type: 3}
+    - {fileID: -1800561202758830752, guid: 36fd4d31df175b74392ede6251e19cfe, type: 3}
+    moveSpeed: 2
+    scale: 3
+    colliderRadius: 0.25
+    animationFrameTime: 0.12
+  - monsterName: Flying eye
+    moveFrames:
+    - {fileID: -3236675104909177313, guid: cb65a514179c63c46bc1594e7a85de4f, type: 3}
+    - {fileID: -6048392498854522608, guid: cb65a514179c63c46bc1594e7a85de4f, type: 3}
+    - {fileID: 4769638531270534136, guid: cb65a514179c63c46bc1594e7a85de4f, type: 3}
+    - {fileID: -4825729793490337222, guid: cb65a514179c63c46bc1594e7a85de4f, type: 3}
+    - {fileID: 710405504474814621, guid: cb65a514179c63c46bc1594e7a85de4f, type: 3}
+    - {fileID: -1658806294426973400, guid: cb65a514179c63c46bc1594e7a85de4f, type: 3}
+    moveSpeed: 2
+    scale: 3
+    colliderRadius: 0.25
+    animationFrameTime: 0.12
+  - monsterName: Goblin
+    moveFrames:
+    - {fileID: -3236675104909177313, guid: 7f065d66d2193e64fafa1c5e434e4b18, type: 3}
+    - {fileID: -6048392498854522608, guid: 7f065d66d2193e64fafa1c5e434e4b18, type: 3}
+    - {fileID: 4769638531270534136, guid: 7f065d66d2193e64fafa1c5e434e4b18, type: 3}
+    - {fileID: -4825729793490337222, guid: 7f065d66d2193e64fafa1c5e434e4b18, type: 3}
+    - {fileID: 710405504474814621, guid: 7f065d66d2193e64fafa1c5e434e4b18, type: 3}
+    - {fileID: -1658806294426973400, guid: 7f065d66d2193e64fafa1c5e434e4b18, type: 3}
+    - {fileID: -985871239997422432, guid: 7f065d66d2193e64fafa1c5e434e4b18, type: 3}
+    - {fileID: 1242959238900065772, guid: 7f065d66d2193e64fafa1c5e434e4b18, type: 3}
+    - {fileID: 8067879071682038392, guid: 7f065d66d2193e64fafa1c5e434e4b18, type: 3}
+    - {fileID: 8207475063323733418, guid: 7f065d66d2193e64fafa1c5e434e4b18, type: 3}
+    - {fileID: 1426644166534133090, guid: 7f065d66d2193e64fafa1c5e434e4b18, type: 3}
+    - {fileID: 8226914660933313673, guid: 7f065d66d2193e64fafa1c5e434e4b18, type: 3}
+    - {fileID: -4962669575770028407, guid: 7f065d66d2193e64fafa1c5e434e4b18, type: 3}
+    moveSpeed: 2
+    scale: 3
+    colliderRadius: 0.25
+    animationFrameTime: 0.12
+  - monsterName: Mushroom
+    moveFrames:
+    - {fileID: -3236675104909177313, guid: faaef9f70b110584db051560a0a99703, type: 3}
+    - {fileID: -6048392498854522608, guid: faaef9f70b110584db051560a0a99703, type: 3}
+    - {fileID: 4769638531270534136, guid: faaef9f70b110584db051560a0a99703, type: 3}
+    - {fileID: -4825729793490337222, guid: faaef9f70b110584db051560a0a99703, type: 3}
+    - {fileID: 710405504474814621, guid: faaef9f70b110584db051560a0a99703, type: 3}
+    - {fileID: -1658806294426973400, guid: faaef9f70b110584db051560a0a99703, type: 3}
+    - {fileID: -985871239997422432, guid: faaef9f70b110584db051560a0a99703, type: 3}
+    - {fileID: 1242959238900065772, guid: faaef9f70b110584db051560a0a99703, type: 3}
+    - {fileID: 8067879071682038392, guid: faaef9f70b110584db051560a0a99703, type: 3}
+    - {fileID: 8207475063323733418, guid: faaef9f70b110584db051560a0a99703, type: 3}
+    - {fileID: 1426644166534133090, guid: faaef9f70b110584db051560a0a99703, type: 3}
+    - {fileID: 8226914660933313673, guid: faaef9f70b110584db051560a0a99703, type: 3}
+    - {fileID: -4962669575770028407, guid: faaef9f70b110584db051560a0a99703, type: 3}
+    - {fileID: 3476395164418213489, guid: faaef9f70b110584db051560a0a99703, type: 3}
+    - {fileID: -9210389793721797529, guid: faaef9f70b110584db051560a0a99703, type: 3}
+    - {fileID: -6577478304988357355, guid: faaef9f70b110584db051560a0a99703, type: 3}
+    - {fileID: -8272923909459914023, guid: faaef9f70b110584db051560a0a99703, type: 3}
+    - {fileID: 7198706843313718617, guid: faaef9f70b110584db051560a0a99703, type: 3}
+    - {fileID: 1128487266077950644, guid: faaef9f70b110584db051560a0a99703, type: 3}
+    - {fileID: 1103878460105870945, guid: faaef9f70b110584db051560a0a99703, type: 3}
+    - {fileID: 3612753552370780630, guid: faaef9f70b110584db051560a0a99703, type: 3}
+    moveSpeed: 2
+    scale: 3
+    colliderRadius: 0.25
+    animationFrameTime: 0.12
+  - monsterName: Skeleton
+    moveFrames:
+    - {fileID: -3236675104909177313, guid: b6bfed40bc1fd844cb15570b8f1872f0, type: 3}
+    - {fileID: -6048392498854522608, guid: b6bfed40bc1fd844cb15570b8f1872f0, type: 3}
+    - {fileID: 4769638531270534136, guid: b6bfed40bc1fd844cb15570b8f1872f0, type: 3}
+    - {fileID: -4825729793490337222, guid: b6bfed40bc1fd844cb15570b8f1872f0, type: 3}
+    - {fileID: 710405504474814621, guid: b6bfed40bc1fd844cb15570b8f1872f0, type: 3}
+    - {fileID: -1658806294426973400, guid: b6bfed40bc1fd844cb15570b8f1872f0, type: 3}
+    moveSpeed: 2
+    scale: 3
+    colliderRadius: 0.25
+    animationFrameTime: 0.12
+  spawnInterval: 10
+  spawnCount: 3
+  minSpawnDistance: 8
+  maxSpawnDistance: 12
+  monsterSortingOrder: 1
+  movementThreshold: 0.01
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -657,3 +859,4 @@ SceneRoots:
   - {fileID: 2001464022}
   - {fileID: 6857673759542886115}
   - {fileID: 561893588}
+  - {fileID: 314159261}
